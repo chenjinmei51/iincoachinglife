@@ -216,16 +216,4 @@
       .sidebar { transition: none !important; }
       .btn, .card { transition: none !important; }
     }
-.sidebar .nav {
-  display: flex;       /* 横向布局 */
-  flex-wrap: nowrap;   /* 不换行 */
-  overflow-x: auto;    /* 超出时可以横向滚动 */
-}
-
-.sidebar .nav a {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 16px;
-  white-space: nowrap; /* 防止文字换行 */
-}
 
