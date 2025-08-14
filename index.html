@@ -9,21 +9,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Homepage with Collapsible Sidebar</title>
-	<link rel="stylesheet" href="assets/style.css">
-  
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+
+<link rel="stylesheet" href="assets/style.css">
+</head>
 </head>
 <body>
   <div class="app">
 
-	  <!-- Search -->
-								<section id="search" class="alt">
+	  
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar" aria-label="Primary">
+      <!-- Sidebar Search -->
+<div class="sidebar-search">
+  <section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Search" />
 									</form>
 								</section>
-    <!-- Sidebar -->
-    <nav id="sidebar" class="sidebar" aria-label="Primary">
-      <div class="title">Menu</div>
+</div>
+      
       <div class="nav" role="list">
         <a href="index.html" role="listitem" aria-current="page">
           
@@ -67,9 +72,9 @@
 			
         
 		  <p class="copyright">
-                                                                &copy; 2025 iinimpact.com. All rights reserved.  
-                                                                Website design adapted from <a href="https://html5up.net" target="_blank" rel="nofollow">HTML5 UP</a>.
-                                                                </p></div>
+            &copy; 2025 iinimpact.com. All rights reserved.  
+           Website design adapted from <a href="https://html5up.net" target="_blank" rel="nofollow" style="color: white;">HTML5 UP</a>.
+           </p></div>
      
 		
 		   </div>
@@ -83,14 +88,32 @@
             ☰
           </button>
           <div class="brand">
-            <span class="logo" aria-hidden="true">★</span>
-            <span>Acme</span>
+            
+            <span>IINcoachinglife</span>
           </div>
         </div>
 
         <div class="header-actions">
-          <button class="btn" onclick="alert('Login clicked')">Log In</button>
-          <button class="btn btn-primary" onclick="alert('Get Started clicked')">Get Started</button>
+        <ul class="icons">
+  <li>
+    <a href="https://twitter.com/intent/tweet?url=https://iinimpact.com/&text=Check%20out%20this%20iinimpact%20discount%20guide!"
+       class="icon-btn" target="_blank" rel="nofollow noopener" aria-label="Share on Twitter">
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://iinimpact.com/"
+       class="icon-btn" target="_blank" rel="nofollow noopener" aria-label="Share on Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+  </li>
+  <li>
+    <a href="mailto:?subject=iinimpact%20Discount%20Guide&body=Check%20out%20this%20page:%20https://iinimpact.com/"
+       class="icon-btn" aria-label="Share via Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </li>
+</ul>
         </div>
       </div>
     </header>
@@ -99,42 +122,1258 @@
     <main id="home">
       <div class="container">
         <section class="hero" aria-labelledby="hero-title">
-          <h1 id="hero-title">Build faster with a clean, accessible layout</h1>
-          <p>A responsive homepage with a collapsible deep-blue sidebar and a crisp white canvas. Use it as a starter template for dashboards, docs, or product sites.</p>
-          <div style="display:flex; gap:10px; margin-top: 6px;">
-            <a class="btn btn-primary" href="#features">Explore Features</a>
-            <a class="btn" href="#pricing">View Pricing</a>
-          </div>
+          <h1 id="hero-title">Save More Online with Exclusive IIN Discount Code</h1>
+          <p style="font-size: 0.95em; color: #555; margin-top: 8px;">
+                <em>Last updated: Aug 14th, 2025</em>
+          </p>
+      <h2 id="hc101">IIN Discount Code – <span class="deal">Save 35%</span> with <span class="pill">YONGLINWUXIIN</span></h2>
+  <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+
+  <ul class="programs">
+    <li><strong>Health Coach Training Program (HCTP)</strong> — 6 or 12 months; online, cohort-based; English &amp; Spanish.</li>
+    <li><strong>Coaching Intensive Practicum</strong> — 3 months / 12 weeks; advanced coaching skills; NBHWC exam prep.</li>
+    <li><strong>Gut Health</strong> — 16 modules; always open.</li>
+    <li><strong>Hormone Health</strong> — 11 modules; English &amp; Spanish; always open.</li>
+    <li><strong>Bundles</strong> — e.g., Health Coach Board Certification Training — also eligible for
+      <strong>35% off with <span class="pill">YONGLINWUXIIN</span></strong>.
+    </li>
+  </ul>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copyIIN');
+      var code = document.getElementById('iin-code').textContent.trim();
+      var msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) { window.dataLayer.push({event:'copy_code_click', code: code}); }
+        });
+      });
+    })();
+  </script>
         </section>
 
-        <section id="features" class="grid" aria-label="Feature cards">
-          <article class="card">
-            <h3>Accessible by default</h3>
-            <p>Semantic HTML, keyboard-friendly controls, and ARIA attributes where helpful.</p>
-          </article>
-          <article class="card">
-            <h3>Responsive & sleek</h3>
+       <section id="about" class="hero">
+          <h2 id="hctp-title">IIN Health Coach Training Program (HCTP) – Holistic Coach Certification + 35% Off</h2>
+
+  <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+
+  <img src="images/the-health-coach-training-program-YONGLINWUXIIN.png"
+             alt="Health Coach Training Program™"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/the-health-coach-training-program-YONGLINWUXIIN.png')" />
+        
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+    <p class="lead">
+    The <strong>Health Coach Training Program</strong> blends holistic nutrition, science-based coaching, business training,
+    expert mentorship, and a <strong>path to NBHWC certification</strong>, with lifetime access and a global alumni network of
+    <strong>180,000+ graduates</strong>. It’s recognized for <strong>NASM 1.9 CEUs</strong>, <strong>AFAA 15 CEUs</strong>, and
+    can earn <strong>up to 29 college credits</strong>. Looking for an <strong>IIN discount code</strong> /
+    <strong>IIN promo code</strong> (an <em>Integrative Nutrition coupon</em>)? Use the code below to save <strong>35%</strong>.
+  </p>
+
+  <!-- Coupon spotlight -->
+  <div class="spotlight" role="region" aria-label="IIN promo code for HCTP">
+    <div>
+      <span class="badge">Your Code</span>
+      <span class="pill">YONGLINWUXIIN</span>
+    </div>
+    <a href="https://sldr.page.link/HTh8Y"
+     target="_blank"
+     rel="noopener noreferrer"
+     onclick="copyThenRedirect(event, 'YONGLINWUXIIN', this.href)"
+     style="display: inline-block; margin-top: 15px; padding: 12px 20px; background-color: #1a73e8; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+    Enroll Now →
+  </a>
+  </div>
+
+  <ul class="bullets">
+    <li>Holistic nutrition + behavior change + business & marketing for coaches.</li>
+    <li>Expert mentorship; taught by <strong>95+ experts</strong>; lifetime access to materials.</li>
+    <li>NBHWC pathway; recognized for <strong>NASM/AFAA CEUs</strong> and <strong>college credits</strong>.</li>
+  </ul>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> for <strong>35% off</strong>; verify eligibility at checkout.
+    Offers are typically non-stackable.
+  </p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+   
+        </section>
+
+        <section id="about" class="hero">
+          
+           <h2 id="cip-title">IIN Coaching Intensive Practicum (CIP) – NBHWC-approved, with 35% Off</h2>
+            
+          <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+   <img src="images/coaching-intensive-practicum-code-YONGLINWUXIIN.png"
+             alt="Coaching Intensive Practicum"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/coaching-intensive-practicum-code-YONGLINWUXIIN.png')" />     
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+
+   <p class="lead">
+    The <strong>Coaching Intensive Practicum</strong> is an <strong>NBHWC-approved</strong> IIN program that fulfills the education requirement for the NBHWC board exam,
+    builds advanced health-coaching skills (motivational interviewing, behavior-change methods, purposeful communication) with <strong>live mentorship</strong>,
+    and is recognized for <strong>ICF CCE</strong>—a strong path to health coach certification. Looking for an <strong>IIN discount code</strong> /
+    <strong>IIN promo code</strong> or an <em>Integrative Nutrition coupon</em>? Use the code below to save <strong>35%</strong>.
+  </p>
+
+  <!-- Coupon spotlight -->
+  <div class="spotlight" role="region" aria-label="IIN promo code for Coaching Intensive Practicum">
+    <div>
+      <span class="badge">Your Code</span>
+      <span class="pill">YONGLINWUXIIN</span>
+    </div>
+    <a href="https://sldr.page.link/HTh8Y"
+     target="_blank"
+     rel="noopener noreferrer"
+     onclick="copyThenRedirect(event, 'YONGLINWUXIIN', this.href)"
+     style="display: inline-block; margin-top: 15px; padding: 12px 20px; background-color: #1a73e8; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+    Enroll Now →
+  </a>
+  </div>
+
+  <ul class="bullets">
+    <li>NBHWC-approved training that counts toward the board exam education requirement.</li>
+    <li>Live mentorship and assessment of real coaching skills.</li>
+    <li>Recognized for ICF CCE; strengthens your health coach certification pathway.</li>
+  </ul>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> for <strong>35% off</strong>; verify eligibility at checkout. Offers are typically non-stackable.
+  </p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('copyCIP');
+      btn.addEventListener('click', function(){
+        var code = document.getElementById('cip-code').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          var m = document.getElementById('copiedMsg');
+          m.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code: code, context: 'CIP', discount: 35});
+        });
+      });
+    })();
+  </script>
+          </section>
+          <section id="about" class="hero">
+            <h2>Gut Health Course</h2>
             <p>Collapsible sidebar becomes an overlay on smaller screens and a fixed panel on desktop.</p>
-          </article>
-          <article class="card">
-            <h3>No dependencies</h3>
-            <p>Pure HTML, CSS, and vanilla JavaScript you can adapt to any stack.</p>
-          </article>
+           <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+    <img src="images/gut-health-course-code-YONGLINWUXIIN.png"
+             alt="Gut Health Course"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/gut-health-course-code-YONGLINWUXIIN.png')" />    
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+          
+        </section>
+         <section id="about" class="hero">
+          <h2>Hormone Health Course</h2>
+          <p>Designed to be a pragmatic starting point. Swap colors, resize the sidebar, and plug in your content in minutes.</p>
+          <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+     <img src="images/hormone-health-course-code-YONGLINWUXIIN.png"
+             alt="Hormone Health Course"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/hormone-health-course-code-YONGLINWUXIIN.png')" />   
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i></i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+
         </section>
 
-        <section id="pricing" class="grid" aria-label="Pricing tiers">
-          <article class="card">
-            <h3>Starter</h3>
+        <section id="about" class="hero">
+          
+            <h2>Mindful Eating Course</h2>
             <p>Everything you need to kick off a project template.</p>
-          </article>
-          <article class="card">
-            <h3>Pro</h3>
+           <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+    <img src="images/mindful-eating-course-YONGLINWUXIIN.png"
+             alt="Mindful Eating Course"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/mindful-eating-course-YONGLINWUXIIN.png')" />    
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+          </section>
+          <section id="about" class="hero">
+            <h2>Nutrition for Life</h2>
             <p>Extended components and priority examples.</p>
-          </article>
-          <article class="card">
-            <h3>Enterprise</h3>
-            <p>Custom theming, SSO, and dedicated support options.</p>
-          </article>
+         
+            <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+    <img src="images/nutrition-for-life-YONGLINWUXIIN.png"
+             alt="Nutrition for Life"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/nutrition-for-life-YONGLINWUXIIN.png')" />    
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+          
+        </section>
+
+         <section id="about" class="hero">
+          <h2>Whole Person Health Course</h2>
+          <p>Designed to be a pragmatic starting point. Swap colors, resize the sidebar, and plug in your content in minutes.</p>
+          <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+     <img src="images/whole-person-health-course-YONGLINWUXIIN.png"
+             alt="Whole Person Health Course"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/whole-person-health-course-YONGLINWUXIIN.png')" />   
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+        </section>
+          <section id="about" class="hero">
+          
+            <h2>Detox Your Life</h2>
+            <p>Everything you need to kick off a project template.</p>
+           <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+    <img src="images/detox-your-life-YONGLINWUXIIN.png"
+             alt="Detox Your Life"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/detox-your-life-YONGLINWUXIIN.png')" />    
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+          </section>
+         <section id="about" class="hero"> 
+            <h2>Launch Your Dream Book</h2>
+            <p>Extended components and priority examples.</p>
+           <p class="iin-eyebrow">Exclusive offer · Limited time · Integrative Nutrition coupon</p>
+
+  <!-- Spotlight block to make the coupon stand out -->
+  <div class="code-spotlight" role="region" aria-label="Your exclusive discount code">
+    <div class="code-badge" aria-live="polite">
+      <span class="label">Your Code</span>
+      <code id="iin-code">YONGLINWUXIIN</code>
+    </div>
+
+    <button id="copyIIN" class="btn" aria-label="Copy discount code YONGLINWUXIIN">Copy Code</button>
+
+    <a class="btn secondary"
+       href="https://sldr.page.link/HTh8Y"
+       rel="nofollow sponsored"
+       aria-label="Go to IIN and apply code YONGLINWUXIIN">
+      Apply at Checkout
+    </a>
+  </div>
+
+  <p class="hint">
+    Use <strong>IIN discount code</strong> <span class="pill">YONGLINWUXIIN</span> to take <strong>35% off</strong> eligible programs.
+    Verify terms at checkout; offers may be non-stackable or time-limited.
+  </p>
+     <img src="images/launch-your-dream-book-YONGLINWUXIIN.png"
+             alt="Launch Your Dream Book"
+             style="width: 100%; max-width: 900px; height: auto; cursor: pointer; border-radius: 6px;"
+             onclick="showLightbox('images/launch-your-dream-book-YONGLINWUXIIN.png')" />   
+           <!-- Numbers -->
+  <div class="deal-grid" aria-describedby="verifyLine">
+    <div>
+      <div class="muted">Original Price</div>
+      <div class="price-old" id="origPrice">—</div>
+    </div>
+    <div>
+      <div class="muted">Sale Price</div>
+      <div class="value" id="salePrice">—</div>
+    </div>
+    <div>
+      <div class="muted">You Save</div>
+      <div class="value" id="youSave">—</div>
+    </div>
+    <div>
+      <div class="muted">Last Verified (Asia/Taipei)</div>
+      <div id="verifiedAt">—</div>
+    </div>
+  </div>
+
+  <p id="verifyLine" class="muted" style="margin-top:.5rem"><i>
+    Use this <strong>IIN discount code</strong> / <strong>IIN promo code</strong>
+    (an <em>Integrative Nutrition coupon</em>) at checkout. Terms may apply; non-stackable with other offers.
+  </i></p>
+
+  <div id="copiedMsg" class="sr-only" role="status" aria-live="polite">Code copied!</div>
+
+  <script>
+    // 👉 Edit these values only
+    const deal = {
+      code: 'YONGLINWUXIIN',      // 优惠代码 / Coupon code
+      discountPct: 35,            // 优惠折扣（百分比）
+      originalPrice: 3995,        // 原价（数字）
+      currency: 'USD',            // 货币
+      verifiedAtISO: new Date().toISOString(), // 验证时间（ISO 字符串）；可替换为你的时间戳
+      applyUrl: 'https://sldr.page.link/HTh8Y'
+    };
+
+    // --- Helpers
+    const money = (n, cur) => new Intl.NumberFormat('en-US', {style:'currency', currency:cur}).format(n);
+    const sale = (orig, pct) => Math.max(0, +(orig * (1 - pct / 100)).toFixed(2));
+    const tzString = (iso, tz) => new Date(iso).toLocaleString('en-GB', { timeZone: tz, hour12: false });
+
+    // --- Render
+    (function render(){
+      const salePrice = sale(deal.originalPrice, deal.discountPct);
+      const saved = +(deal.originalPrice - salePrice).toFixed(2);
+
+      document.getElementById('couponCode').textContent = deal.code;
+      document.getElementById('discPct').textContent = deal.discountPct + '%';
+      document.getElementById('origPrice').textContent = money(deal.originalPrice, deal.currency);
+      document.getElementById('salePrice').textContent = money(salePrice, deal.currency);
+      document.getElementById('youSave').textContent = money(saved, deal.currency);
+      document.getElementById('verifiedAt').textContent = tzString(deal.verifiedAtISO, 'Asia/Taipei');
+      document.getElementById('applyLink').href = deal.applyUrl;
+
+      // JSON-LD (SEO) – Offer
+      const ld = {
+        "@context":"https://schema.org",
+        "@type":"Offer",
+        "url": deal.applyUrl,
+        "priceCurrency": deal.currency,
+        "price": salePrice,
+        "availabilityStarts": deal.verifiedAtISO,
+        "eligibleQuantity": 1,
+        "category": "Education",
+        "discount": deal.discountPct + "%",
+        "sku": "IIN-PROMO",
+        "name": "IIN Discount Code " + deal.code,
+        "description": "Save " + deal.discountPct + "% with IIN promo code " + deal.code + ". Original price " + money(deal.originalPrice, deal.currency) + "."
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.currentScript.parentNode.appendChild(s);
+    })();
+
+    // --- Copy interaction
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const msg = document.getElementById('copiedMsg');
+      btn.addEventListener('click', function(){
+        const code = document.getElementById('couponCode').textContent.trim();
+        navigator.clipboard.writeText(code).then(function(){
+          msg.textContent = 'Code copied: ' + code;
+          alert('Code copied: ' + code);
+          if (window.dataLayer) window.dataLayer.push({event:'copy_code_click', code});
+        });
+      });
+    })();
+  </script>
+          
         </section>
 
         <section id="about" class="hero">
