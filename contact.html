@@ -152,72 +152,37 @@
           <h1 id="hero-title">Contact Us</h1>
           
         </section>
-<p class="lead">Questions about an <strong>IIN discount code</strong>, eligibility, or checkout? Send us a message—we typically reply quickly with clear steps.</p>
- 
-
-  <div class="grid">
-    <!-- Form -->
-    <section class="card" aria-labelledby="form-title">
-      <h2 id="form-title" style="margin-top:0">Send a message</h2>
-      <form id="contactForm" novalidate>
-        <!-- Honeypot (anti-spam) -->
-        <label class="sr-only" for="website">Website</label>
-        <input id="website" name="website" type="text" autocomplete="off" tabindex="-1" class="sr-only" aria-hidden="true"/>
-
-        <div class="row">
-          <div>
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" required placeholder="Jane Doe" />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required placeholder="you@example.com" />
-          </div>
-        </div>
-
-        <div class="row">
-          <div>
-            <label for="topic">Topic</label>
-            <select id="topic" name="topic" required>
-              <option value="">Select one…</option>
-              <option>Discount code help</option>
-              <option>Eligibility / checkout</option>
-              <option>Report a code</option>
-              <option>Partnership</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div>
-            <label for="orderUrl">IIN checkout URL (optional)</label>
-            <input id="orderUrl" name="orderUrl" type="url" placeholder="https://www.integrativenutrition.com/…"/>
-          </div>
-        </div>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
-
-        <div style="margin:.7rem 0">
-          <label style="display:flex;gap:.5rem;align-items:center">
-            <input type="checkbox" id="attachCode" checked />
-            Include our featured code <span class="badge">Your Code</span> <code class="code">YONGLINWUXIIN</code> in the message (35% off)
-          </label>
-        </div>
-
-        <button class="btn" type="submit">Send</button>
-        <p class="hint" id="formHint" role="status" aria-live="polite" style="margin-top:.5rem"></p>
-      </form>
+<!-- Featured code (copy only, no form) -->
+    <section class="card" aria-labelledby="code-title">
+      <h2 id="code-title" style="margin-top:0">Need a working IIN discount code?</h2>
+      <p>
+        Try <span class="badge">Your Code</span>
+        <code class="code" id="featCode">YONGLINWUXIIN</code> — save <strong>35%</strong>.
+        <button type="button" class="copy" id="copyBtn" aria-label="Copy code YONGLINWUXIIN">Copy</button>
+        <span id="copyState" class="hint"></span>
+      </p>
+      <p class="hint">Codes are typically non-stackable. Final eligibility and pricing are shown on the IIN checkout page.</p>
+      <p>
+        <a class="btn" rel="nofollow sponsored"
+           href="https://www.integrativenutrition.com/health-coaching-101?sldiscountcode=YONGLINWUXIIN">
+          Apply 35% Off
+        </a>
+        <a class="btn secondary" href="/iin-discount-code/" style="margin-left:8px">See All Codes</a>
+      </p>
     </section>
 
-    <!-- Sidebar with quick help -->
-    <aside class="sidebar">
-      <div class="card">
-        <h3 style="margin-top:0">Quick help</h3>
-        <p>Try <span class="badge">Your Code</span> <code class="code">YONGLINWUXIIN</code> to save <strong>35%</strong> at checkout.</p>
-        <p class="hint">Codes are typically non-stackable. The IIN checkout page is the source of truth for eligibility.</p>
-        <p><strong>Email:</strong> <a href="mailto:hello@iincoachinglife.com">hello@iincoachinglife.com</a></p>
-      </div>
-    </aside>
-  </div>
+    <!-- Direct contact options (no form) -->
+    <section class="card" aria-labelledby="contact-title">
+      <h2 id="contact-title" style="margin-top:0">Reach us directly</h2>
+      <ul class="links">
+        <li><strong>Email:</strong> <a href="mailto:hello@iincoachinglife.com">hello@iincoachinglife.com</a></li>
+        <li><strong>FAQ:</strong> <a href="/faq/">Frequently Asked Questions</a></li>
+        <li><strong>Privacy:</strong> <a href="/privacy/">Privacy Policy</a></li>
+      </ul>
+      <p class="hint">Prefer not to email? Check the FAQ for instant answers on eligibility, stacking rules, and troubleshooting.</p>
+    </section>
+
+    <p class="hint">Not affiliated with Institute for Integrative Nutrition. Some outbound links are sponsored/affiliate; this does not change your price.</p>
     </main>
   </div>
 
