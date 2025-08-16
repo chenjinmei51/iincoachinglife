@@ -298,5 +298,49 @@ ul.icons {
     .deal {font-weight:800}
     .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
 .deal-grid {display:grid; grid-template-columns: 1fr 1fr; gap:10px 18px; align-items:center}
- 
+
+
+/* 1) 基础：让媒体元素不超出屏幕 */
+img, svg, video, canvas, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2) 页面左右留白用流式单位，避免固定宽度导致挤压 */
+main, header, footer, .container {
+  padding-left: clamp(12px, 4vw, 24px);
+  padding-right: clamp(12px, 4vw, 24px);
+}
+
+/* 3) 你首页的“优惠代码卡片/按钮”在小屏折为一列 */
+.hero .card,
+.code-spotlight {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .hero .card,
+  .code-spotlight {
+    grid-template-columns: 1fr;    /* 按钮与链接换行 */
+  }
+  .btn { width: 100%; }            /* 按钮在手机上全宽更好点按 */
+}
+
+/* 4) 你之前要求“表格半屏宽”的数字模块（deal-grid）
+      用 clamp，桌面≈50vw，手机自动不超屏并居中 */
+.deal-grid {
+  width: clamp(320px, 50vw, 560px);
+  margin: 0 auto;
+}
+
+/* 5) 若有多卡片网格（如课程列表），小屏降列数 */
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+/* 6) 防止偶发横向滚动条（有需要再开） */
+/* html, body { overflow-x: hidden; } */
+
 
